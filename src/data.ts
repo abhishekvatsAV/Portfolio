@@ -135,7 +135,7 @@ export const projects: IProject[] = [
     id: 6,
     name: "Portfolio",
     image_path: "/images/portfolio.png",
-    deployed_url: "https://random-quote-machine-shc3.onrender.com/",
+    deployed_url: "https://abhishekvats.tech/",
     github_url: "https://github.com/abhishekvatsAV/Portfolio",
     category: ["react"],
     description:
