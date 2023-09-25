@@ -62,7 +62,6 @@ const Sidebar = () => {
           <span>Delhi, India</span>
         </div>
         <p className="my-2">abhishek.vats.av3@gmail.com</p>
-        <p className="my-2">9xxxxxxxx2</p>
       </div>
 
       <button
