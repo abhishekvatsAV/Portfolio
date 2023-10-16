@@ -14,8 +14,8 @@ const About = () => {
         initial={{ scale: 0 }}
         className={`my-3 text-base font-normal text-gray-400 `}
       >
-        My name is Abhishek Vats and I am from Delhi and I have recently
-        completed my Bachelor's degree in Electronics and Communications
+        My name is Abhishek Vats and I'm from Delhi, India. I have recently
+        completed my Bachelor's degree in Electronics and Communication
         Engineering from NSUT EAST CAMPUS, Delhi. I have an impressive academic
         record with a CGPA of 8.87. I am passionate about programming and have
         developed my skills through various courses and projects.
