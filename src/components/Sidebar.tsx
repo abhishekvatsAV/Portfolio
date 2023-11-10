@@ -1,6 +1,5 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
-import { BiDownload } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../slice";
 import { useSelector } from "react-redux";
