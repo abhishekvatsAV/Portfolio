@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { toggleTheme } from "../slice";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
+import { PiEyeClosedBold } from "react-icons/pi";
 
 const Sidebar = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
@@ -33,11 +34,12 @@ const Sidebar = () => {
         className={`flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full gap-2 ${
           theme === "dark" && "!bg-dark-200"
         } `}
-        href="/assets/Abhishek_Vats_Resume.pdf"
-        download="Abhishek_Vats_Resume.pdf"
+        href="https://drive.google.com/file/d/1kzh8F52GDE_XpormtVN1Ahh3xK44hMlD/view"
+        target="_blank"
+        rel="noreferrer"
       >
         Resume
-        <BiDownload className="w-6 h-6 " />
+        <PiEyeClosedBold className="w-6 h-6 " />
       </a>
 
       {/* social icons */}
