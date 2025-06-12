@@ -6,6 +6,12 @@ import { IProject, IService, ISkill } from "./types";
 
 export const skills: ISkill[] = [
   {
+    name: "AWS",
+  },
+  {
+    name: "AWS OpenSearch",
+  },
+  {
     name: "React",
   },
   {

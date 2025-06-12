@@ -33,7 +33,7 @@ const Sidebar = () => {
         className={`flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full gap-2 ${
           theme === "dark" && "!bg-dark-200"
         } `}
-        href="https://drive.google.com/file/d/1kzh8F52GDE_XpormtVN1Ahh3xK44hMlD/view"
+        href="https://bit.ly/abhishek_vats_cv"
         target="_blank"
         rel="noreferrer"
       >
