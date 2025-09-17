@@ -1,27 +1,61 @@
-# React + TypeScript + Vite
+# 🚀 Abhishek Vats Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Screenshot](./public/images/portfolio.png)
 
-Currently, two official plugins are available:
+> Personal portfolio site built with React, TypeScript, Tailwind CSS, Framer Motion, and Redux. Showcasing my skills, projects, and experience in web development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌟 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **About Me**: Quick intro and background
+- **Resume**: Education, experience, and skills
+- **Projects**: Interactive cards for my top projects
+- **Sidebar & Navbar**: Smooth navigation
+- **Theme Support**: Light/Dark mode
+- **Animations**: Framer Motion for smooth transitions
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## 🛠️ Tech Stack
+
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Redux
+- Vite
+
+---
+
+## 📂 Projects
+
+| Project                | Description                            | Demo                                                    | Code                                                               |
+| ---------------------- | -------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------ |
+| Problem Tracker        | Track DSA problems, visualize progress | [Live](https://problemtracker.netlify.app/login)        | [Repo](https://github.com/abhishekvatsAV/problem-tracker-frontend) |
+| Chat App               | Real-time messaging with group chat    | [Live](https://chit-talks-app.netlify.app/)             | [Repo](https://github.com/abhishekvatsAV/Chit_Chat_App_Frontend)   |
+| Memory Game            | Card-flipping game to match pairs      | [Live](https://memory-game-6fss.onrender.com/)          | [Repo](https://github.com/abhishekvatsAV/Memory_Game)              |
+| Calculator             | Simple calculator with clean UI        | [Live](https://calculator-wljw.onrender.com/)           | [Repo](https://github.com/abhishekvatsAV/calculator)               |
+| Random Quote Generator | Generate and share random quotes       | [Live](https://random-quote-machine-shc3.onrender.com/) | [Repo](https://github.com/abhishekvatsAV/Random_Quote_Machine)     |
+| Portfolio              | This site!                             | [Live](https://abhishekvats.tech/)                      | [Repo](https://github.com/abhishekvatsAV/Portfolio)                |
+
+---
+
+## 📦 Setup & Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## 📧 Contact
+
+- [LinkedIn](https://www.linkedin.com/in/abhishek-vats-av/)
+- [Email](abhishek.vats.av3@gmail.com)
+
+> Made with ❤️ by Abhishek Vats
