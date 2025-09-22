@@ -40,6 +40,12 @@ const Sidebar = () => {
         Resume
         <PiEyeClosedBold className="w-6 h-6 " />
       </a>
+      <button
+        className={`w-full px-2 py-1 my-3 bg-gray-200 rounded-full font-semibold text-gray-700 hover:bg-green-100 transition ${theme === "dark" && "!bg-dark-200"}`}
+        onClick={() => window.location.reload()}
+      >
+        Tips
+      </button>
 
       {/* social icons */}
       <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
