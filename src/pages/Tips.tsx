@@ -2,21 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 
+interface TipMessage {
+  id: string;
+  message: string;
+  created_at: string;
+}
+
 const Tips: React.FC = () => {
-  const [tips, setTips] = useState<string[]>([]);
+  const [tips, setTips] = useState<TipMessage[]>([]);
   const [newTip, setNewTip] = useState('');
   const [loading, setLoading] = useState(false);
-  const userId = localStorage.getItem('user_id');
+  const [userId, setUserId] = useState(localStorage.getItem('user_id') || "");
   const theme = useSelector((state: RootState) => state.theme.value);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     async function fetchTips() {
       setLoading(true);
       try {
         // Replace with your actual API endpoint
-        const res = await fetch(`/api/tips?userId=${userId}`);
+        console.log("url : ", apiUrl);
+        const res = await fetch(`${apiUrl}/tips/${userId}`);
         const data = await res.json();
-        setTips(data.tips || []);
+  setTips(data.messages || []);
       } catch (err) {
         setTips([]);
       } finally {
@@ -24,7 +32,7 @@ const Tips: React.FC = () => {
       }
     }
     if (userId) fetchTips();
-  }, [userId]);
+  }, []);
 
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -33,12 +41,15 @@ const Tips: React.FC = () => {
     setLoading(true);
     try {
       // Replace with your actual API endpoint
-      await fetch('/api/tips', {
+      const res = await fetch(`${apiUrl}/tip`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId, tip: newTip }),
+        body: JSON.stringify({ id: userId, message: newTip }),
       });
-      setTips(prev => [...prev, newTip]);
+      const data = await res.json();
+      setTips(data.messages || []);
+      setUserId(data.messages[0].id || "");
+      localStorage.setItem('user_id', userId);
       setNewTip('');
     } catch (err) {
       // Handle error
@@ -73,8 +84,8 @@ const Tips: React.FC = () => {
             <div className={theme === 'dark' ? 'text-gray-400' : 'text-gray-400'}>No tips yet.</div>
           ) : (
             <ul className="space-y-2">
-              {tips.map((tip, idx) => (
-                <li key={idx} className={`px-3 py-2 ${theme === 'dark' ? 'bg-dark-200 text-white' : 'bg-gray-100 text-gray-700'}`}>{tip}</li>
+              {tips.map((tip) => (
+                <li key={tip.id + tip.created_at} className={`px-3 py-2 ${theme === 'dark' ? 'bg-dark-200 text-white' : 'bg-gray-100 text-gray-700'}`}>{tip.message}</li>
               ))}
             </ul>
           )}
