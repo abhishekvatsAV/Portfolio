@@ -20,8 +20,6 @@ const Tips: React.FC = () => {
     async function fetchTips() {
       setLoading(true);
       try {
-        // Replace with your actual API endpoint
-        console.log("url : ", apiUrl);
         const res = await fetch(`${apiUrl}/tips/${userId}`);
         const data = await res.json();
   setTips(data.messages || []);
@@ -40,7 +38,6 @@ const Tips: React.FC = () => {
     if (!newTip.trim()) return;
     setLoading(true);
     try {
-      // Replace with your actual API endpoint
       const res = await fetch(`${apiUrl}/tip`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
