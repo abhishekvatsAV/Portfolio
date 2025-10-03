@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 
-export type sections = "about" | "projects" | "resume";
+export type sections = "about" | "projects" | "resume" | "tips";
 
 export interface NavbarProps {
   section: sections;

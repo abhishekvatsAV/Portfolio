@@ -35,6 +35,15 @@ const Navbar: React.FC<NavbarProps> = ({ section, setSection }) => {
       >
         Resume
       </div>
+      <div
+        className={`${
+          section === "tips" ? "text-green " : ""
+        } cursor-pointer button-89 font-semibold`}
+        onClick={() => handleClick("tips")}
+        role="button"
+      >
+        Tips
+      </div>
     </div>
   );
 };

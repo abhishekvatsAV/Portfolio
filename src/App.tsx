@@ -7,6 +7,7 @@ import { useState } from "react";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
+import Tips from "./pages/Tips";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
 
@@ -37,6 +38,7 @@ function App() {
           {section === "about" && <About />}
           {section === "resume" && <Resume />}
           {section === "projects" && <Projects />}
+          {section === "tips" && <Tips />}
         </AnimatePresence>
       </div>
     </div>
