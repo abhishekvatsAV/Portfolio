@@ -22,7 +22,7 @@ const Tips: React.FC = () => {
       try {
         const res = await fetch(`${apiUrl}/tips/${userId}`);
         const data = await res.json();
-  setTips(data.messages || []);
+        setTips(data.messages || []);
       } catch (err) {
         setTips([]);
       } finally {
@@ -70,19 +70,19 @@ const Tips: React.FC = () => {
   }, [tips]);
 
   return (
-    <div className={`flex flex-col flex-grow px-6 pt-1 ${theme === 'dark' ? 'bg-dark !text-white' : 'bg-gray-50'}`}>
-      <h2 className={`text-3xl font-bold mb-6 ${theme === 'dark' ? 'text-green' : 'text-gray-800'}`}>Anonymous Tips</h2>
-      <div className={`flex flex-col flex-grow shadow p-6 mb-8 ${theme === 'dark' ? 'bg-dark-100' : 'bg-white'}`} style={{marginLeft: '-1.5rem', marginRight: '-1.5rem', minHeight: '350px', maxHeight: '500px'}}>
-        <h3 className={`text-xl font-semibold mb-4 ${theme === 'dark' ? 'text-green' : 'text-gray-700'}`}>Previous Tips</h3>
-        <div className="flex-1 overflow-y-auto mb-4" style={{maxHeight: '350px'}} ref={tipsWindowRef}>
+    <div className={`flex flex-col flex-grow px-4 sm:px-6 pt-1 overflow-y-auto ${theme === 'dark' ? 'bg-dark !text-white' : 'bg-gray-50'}`} style={{ height: "calc(100vh - 120px)", maxHeight: "65vh" }}>
+      <h2 className={`text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 ${theme === 'dark' ? 'text-green' : 'text-gray-800'}`}>Anonymous Tips</h2>
+      <div className={`flex flex-col flex-grow shadow p-4 sm:p-6 mb-4 sm:mb-8 ${theme === 'dark' ? 'bg-dark-100' : 'bg-white'} rounded-lg`} style={{ marginLeft: '-1rem', marginRight: '-1rem', minHeight: '300px' }}>
+        <h3 className={`text-lg sm:text-xl font-semibold mb-3 sm:mb-4 ${theme === 'dark' ? 'text-green' : 'text-gray-700'}`}>Previous Tips</h3>
+        <div className="flex-1 overflow-y-auto mb-4 min-h-[200px] sm:min-h-[250px]" ref={tipsWindowRef}>
           {loading ? (
-            <div className={theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}>Loading...</div>
+            <div className={`text-center py-4 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>Loading...</div>
           ) : tips.length === 0 ? (
-            <div className={theme === 'dark' ? 'text-gray-400' : 'text-gray-400'}>No tips yet.</div>
+            <div className={`text-center py-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-400'}`}>No tips yet.</div>
           ) : (
             <ul className="space-y-2">
               {tips.map((tip) => (
-                <li key={tip.id + tip.created_at} className={`px-3 py-2 ${theme === 'dark' ? 'bg-dark-200 text-white' : 'bg-gray-100 text-gray-700'}`}>{tip.message}</li>
+                <li key={tip.id + tip.created_at} className={`px-3 py-2 rounded-lg text-sm sm:text-base ${theme === 'dark' ? 'bg-dark-200 text-white' : 'bg-gray-100 text-gray-700'}`}>{tip.message}</li>
               ))}
             </ul>
           )}
@@ -103,7 +103,7 @@ const Tips: React.FC = () => {
             disabled={loading}
           />
           <button
-            className={`px-4 py-2 rounded disabled:opacity-50 ${theme === 'dark' ? 'bg-green text-white hover:bg-green-700' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
+            className={`px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base disabled:opacity-50 transition-colors ${theme === 'dark' ? 'bg-green text-white hover:bg-green-700' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
             onClick={handleAddTip}
             disabled={loading || !newTip.trim()}
           >

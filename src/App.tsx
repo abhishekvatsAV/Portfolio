@@ -17,21 +17,18 @@ function App() {
 
   return (
     <div
-      className={`grid grid-cols-12 gap-6 px-5 lg:px-48 py-14 sm:px-20 md:px-32 ${
-        theme === "dark" && " !text-white"
-      } min-h-screen h-full`}
+      className={`grid grid-cols-12 gap-4 sm:gap-6 px-3 sm:px-5 lg:px-48 py-4 sm:py-8 lg:py-14 md:px-32 ${theme === "dark" && " !text-white"
+        } min-h-screen h-full`}
     >
       <div
-        className={`col-span-12 p-4 overflow-hidden text-center bg-white lg:col-span-3 rounded-2xl  shadow-custom-light ${
-          theme === "dark" && "!bg-dark !shadow-custom-dark"
-        }`}
+        className={`col-span-12 p-3 sm:p-4 overflow-hidden text-center bg-white lg:col-span-3 rounded-xl sm:rounded-2xl shadow-custom-light ${theme === "dark" && "!bg-dark !shadow-custom-dark"
+          }`}
       >
         <Sidebar />
       </div>
       <div
-        className={`flex flex-col col-span-12 bg-white lg:col-span-9 rounded-2xl  shadow-custom-light overflow-hidden ${
-          theme === "dark" && "!bg-dark !shadow-custom-dark"
-        }`}
+        className={`flex flex-col col-span-12 bg-white lg:col-span-9 rounded-xl sm:rounded-2xl shadow-custom-light overflow-hidden ${theme === "dark" && "!bg-dark !shadow-custom-dark"
+          }`}
       >
         <Navbar section={section} setSection={setSection} />
         <AnimatePresence mode="wait">
