@@ -1,6 +1,6 @@
 # 🚀 Abhishek Vats Portfolio
 
-![Portfolio Screenshot](./public/images/portfolio.png)
+![Portfolio Screenshot](./public/images/portfolio-modern.svg)
 
 > Personal portfolio site built with React, TypeScript, Tailwind CSS, Framer Motion, and Redux. Showcasing my skills, projects, and experience in web development.
 
