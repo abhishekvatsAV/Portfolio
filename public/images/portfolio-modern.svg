@@ -1,0 +1,22 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" rx="28" fill="#0D1714"/>
+  <path d="M0 94H1200M0 574H1200M270 0V675" stroke="#28493D"/>
+  <circle cx="92" cy="72" r="32" fill="#173C30"/>
+  <path d="M80 72H104M92 60V84" stroke="#59E0A9" stroke-width="3"/>
+  <text x="54" y="146" fill="#59E0A9" font-family="monospace" font-size="16" letter-spacing="3">DATA SYSTEMS · CLOUD · CODE</text>
+  <text x="54" y="246" fill="#EDF8F2" font-family="Arial, sans-serif" font-size="76" font-weight="700">I make data</text>
+  <text x="54" y="324" fill="#59E0A9" font-family="Arial, sans-serif" font-size="76" font-weight="700">worth trusting.</text>
+  <text x="54" y="387" fill="#9AB0A6" font-family="Arial, sans-serif" font-size="22">AWS Data Engineer · quality · observability</text>
+  <rect x="54" y="467" width="172" height="48" rx="24" fill="#173C30"/>
+  <text x="87" y="498" fill="#59E0A9" font-family="monospace" font-size="15">VIEW WORK ↗</text>
+  <rect x="788" y="146" width="332" height="376" rx="20" fill="#12241E" stroke="#28493D"/>
+  <text x="824" y="194" fill="#59E0A9" font-family="monospace" font-size="13" letter-spacing="2">PIPELINE STATUS</text>
+  <path d="M824 256H1084M824 324H1084M824 392H1084" stroke="#28493D"/>
+  <circle cx="852" cy="256" r="12" fill="#59E0A9"/>
+  <circle cx="852" cy="324" r="12" fill="#59E0A9"/>
+  <circle cx="852" cy="392" r="12" fill="#59E0A9"/>
+  <text x="884" y="262" fill="#EDF8F2" font-family="Arial, sans-serif" font-size="18">Data quality</text>
+  <text x="884" y="330" fill="#EDF8F2" font-family="Arial, sans-serif" font-size="18">Cloud platform</text>
+  <text x="884" y="398" fill="#EDF8F2" font-family="Arial, sans-serif" font-size="18">Observability</text>
+  <text x="824" y="476" fill="#9AB0A6" font-family="monospace" font-size="13">5M+ RECORDS VALIDATED</text>
+</svg>

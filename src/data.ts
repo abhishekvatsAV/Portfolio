@@ -6,156 +6,72 @@ import { IProject, IService, ISkill } from "./types";
 
 export const skills: ISkill[] = [
   {
-    name: "AWS",
+    name: "AWS Glue",
   },
   {
-    name: "AWS OpenSearch",
+    name: "PySpark",
   },
   {
-    name: "React",
+    name: "Amazon Deequ",
   },
   {
-    name: "Node",
+    name: "Snowflake",
   },
   {
-    name: "Typescript",
+    name: "Apache Iceberg",
   },
   {
-    name: "MongoDB",
+    name: "S3 / Redshift",
   },
   {
-    name: "Express",
+    name: "Datadog",
   },
   {
-    name: "Mongoose",
-  },
-  {
-    name: "HTML",
-  },
-  {
-    name: "CSS",
-  },
-  {
-    name: "JavaScript",
-  },
-  {
-    name: "Tailwind CSS",
-  },
-  {
-    name: "C++",
+    name: "Python",
   },
   {
     name: "SQL",
   },
   {
-    name: "Python",
+    name: "Docker",
+  },
+  {
+    name: "TypeScript",
+  },
+  {
+    name: "PostgreSQL",
   },
 ];
 
 export const services: IService[] = [
   {
     Icon: RiComputerLine,
-    title: "Frontend Development",
+    title: "Data quality systems",
     about:
-    "Crafting pixel-perfect, responsive interfaces with <b>React</b>, <b>TypeScript</b>, and <b>Tailwind CSS</b>. Building modern SPAs with smooth animations and intuitive UX.",
+    "Automating trust with <b>Amazon Deequ</b> and <b>PySpark</b> validation across Snowflake and Apache Iceberg data products.",
   },
   {
     Icon: FaServer,
-    title: "Backend Development",
+    title: "Cloud data platforms",
     about:
-      "Designing scalable REST APIs with <b>Node.js</b> and <b>Express</b>. Working with <b>MongoDB</b>, <b>Prisma</b>, and cloud services like <b>AWS OpenSearch</b> for robust solutions.",
+      "Building multi-zone <b>AWS S3</b> lakes and transformation paths through Glue, ECS Fargate, Athena, and Redshift.",
   },
   {
     Icon: AiOutlineApi,
-    title: "Full-Stack Solutions",
-    about: "End-to-end development with <b>MERN stack</b>. From database design to deployment, creating complete applications with secure authentication and real-time features.",
+    title: "Event-driven orchestration",
+    about: "Connecting config-driven workflows with <b>DynamoDB</b>, <b>SNS</b>, <b>SQS</b>, Lambda, and EventBridge schedules.",
   },
   {
     Icon: MdDeveloperMode,
-    title: "Problem Solving",
+    title: "Observability & lineage",
     about:
-      "Active competitive programmer on <b>LeetCode</b>, <b>CodeChef</b>, and <b>Codeforces</b>. Passionate about algorithms, data structures, and optimizing solutions.",
+      "Making pipeline health visible with <b>Datadog</b> traces, monitors, dashboards, and upstream/downstream lineage.",
   },
 ];
 
 export const projects: IProject[] = [
   {
     id: 1,
-    name: "Problem Tracker",
-    description:
-      "A valuable tool for avid DSA solvers and competitive programmers across multiple platforms. It enables problem tracking and provides visual insights into solved problems.",
-    image_path: "/images/problemTrackerApp.png",
-    deployed_url: "https://problemtracker.netlify.app/login",
-    github_url: "https://github.com/abhishekvatsAV/problem-tracker-frontend",
-    category: ["react"],
-    key_techs: ["React", "Node", "Express", "MongoDB", "Tailwind CSS"],
-  },
-  {
-    id: 2,
-    name: "Chat App",
-    image_path: "/images/chatApp.png",
-    deployed_url: "https://chit-talks-app.netlify.app/",
-    github_url: "https://github.com/abhishekvatsAV/Chit_Chat_App_Frontend",
-    category: ["node"],
-    description:
-      "Created a real-time messaging chat app using the MERN stack, powered by Socket.io for seamless communication. Secured user information with encrypted storage in MongoDB and enriched the app with a convenient Group Chat feature for enhanced collaboration.",
-    key_techs: ["React", "Node", "Express", "MongoDB", "Chakra UI"],
-  },
-
-  {
-    id: 3,
-    name: "Memory Game",
-    image_path: "/images/memoryGame.png",
-    deployed_url: "https://memory-game-6fss.onrender.com/",
-    github_url: "https://github.com/abhishekvatsAV/Memory_Game",
-    category: ["react"],
-    description:
-      "Developed memory game using React JS with card flipping to match pairs, optimizing user experience with various Hooks.",
-    key_techs: ["React", "CSS"],
-  },
-
-  {
-    id: 4,
-    name: "Calculator",
-    image_path: "/images/calculator.png",
-    deployed_url: "https://calculator-wljw.onrender.com/",
-    github_url: "https://github.com/abhishekvatsAV/calculator",
-    category: ["react"],
-    description:
-      "Basic Calculator App to solve simple arithmetic operations with a clean UI.",
-    key_techs: ["React", "CSS"],
-  },
-
-  {
-    id: 5,
-    name: "Random Quote Generator",
-    image_path: "/images/randomApp.png",
-    deployed_url: "https://random-quote-machine-shc3.onrender.com/",
-    github_url: "https://github.com/abhishekvatsAV/Random_Quote_Machine",
-    category: ["react"],
-    description:
-      "React Application to generate random quotes with a single click and share them on Twitter. Using Rapid API.",
-    key_techs: ["React", "Rapid API"],
-  },
-  {
-    id: 6,
-    name: "Portfolio",
-    image_path: "/images/portfolio.png",
-    deployed_url: "https://abhishekvats.tech/",
-    github_url: "https://github.com/abhishekvatsAV/Portfolio",
-    category: ["react"],
-    description:
-      "Personal Portfolio Website to showcase my skills and projects.",
-    key_techs: [
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Typescript",
-      "Redux",
-    ],
-  },
-  {
-    id: 7,
     name: "AlgoForge",
     image_path: "/images/algoForge.png",
     deployed_url: "#",
@@ -174,5 +90,45 @@ export const projects: IProject[] = [
       "JWT",
       "Tailwind CSS",
     ],
+  },
+  {
+    id: 2,
+    name: "Chat App",
+    image_path: "/images/chatApp.png",
+    deployed_url: "https://chit-talks-app.netlify.app/",
+    github_url: "https://github.com/abhishekvatsAV/Chit_Chat_App_Frontend",
+    category: ["node"],
+    description:
+      "Created a real-time messaging chat app using the MERN stack, powered by Socket.io for seamless communication. Secured user information with encrypted storage in MongoDB and enriched the app with a convenient Group Chat feature for enhanced collaboration.",
+    key_techs: ["React", "Node", "Express", "MongoDB", "Chakra UI"],
+  },
+
+  {
+    id: 3,
+    name: "Portfolio",
+    image_path: "/images/portfolio-modern.svg",
+    deployed_url: "https://abhishekvats.tech/",
+    github_url: "https://github.com/abhishekvatsAV/Portfolio",
+    category: ["react"],
+    description:
+      "Personal Portfolio Website to showcase my skills and projects.",
+    key_techs: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Typescript",
+      "Redux",
+    ],
+  },
+  {
+    id: 4,
+    name: "Problem Tracker",
+    description:
+      "A valuable tool for avid DSA solvers and competitive programmers across multiple platforms. It enables problem tracking and provides visual insights into solved problems.",
+    image_path: "/images/problemTrackerApp.png",
+    deployed_url: "https://problemtracker.netlify.app/login",
+    github_url: "https://github.com/abhishekvatsAV/problem-tracker-frontend",
+    category: ["react"],
+    key_techs: ["React", "Node", "Express", "MongoDB", "Tailwind CSS"],
   },
 ];
