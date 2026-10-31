@@ -4,95 +4,58 @@ import { useDispatch } from "react-redux";
 import { toggleTheme } from "../slice";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
-import { PiEyeClosedBold } from "react-icons/pi";
+import { FiMail, FiMoon, FiSun } from "react-icons/fi";
 
 const Sidebar = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="profile-content">
       <img
-        src="https://res.cloudinary.com/dudoss6ih/image/upload/v1695415677/sy6mtrkbbfiof1s6fkxg.jpg"
-        alt="user avatar"
-        className="mx-auto rounded-full"
+        src="/onePiece.jpeg"
+        alt="One Piece inspired compass artwork"
+        className="profile-avatar mx-auto"
         height="128"
         width="128"
       />
-      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-        <span className="text-green">Abhishek </span> Vats
+      <p className="eyebrow mt-6">Data systems · cloud · code</p>
+      <h3 className="profile-name my-3">
+        Abhishek <span>Vats</span>
       </h3>
-      <p
-        className={`px-2 py-1 my-3 bg-gray-200 rounded-full ${
-          theme === "dark" && "!bg-dark-200"
-        } `}
-      >
-        Web Developer
+      <p className="profile-role">
+        AWS Data Engineer building reliable pipelines, quality frameworks, and observability for data products.
       </p>
-      <a
-        className={`flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full gap-2 ${
-          theme === "dark" && "!bg-dark-200"
-        } `}
+      <div className="profile-actions flex flex-wrap gap-2 my-5">
+        <a className="profile-action text-sm font-semibold" href="https://bit.ly/abhishek_vats_cv" target="_blank" rel="noreferrer">
+          View resume
+        </a>
+        <button className="profile-action text-sm" onClick={() => dispatch(toggleTheme())} aria-label="Toggle color theme">
+          {theme === "dark" ? <FiSun /> : <FiMoon />}
+        </button>
+      </div>
+      <div className="profile-socials flex gap-4 my-5">
+        <a className="social-link" href="https://github.com/abhishekvatsAV" aria-label="Github" target="_blank" rel="noreferrer"><AiFillGithub className="w-6 h-6" /></a>
+        <a className="social-link" href="https://www.linkedin.com/in/abhishek-vats-av/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><AiFillLinkedin className="w-6 h-6" /></a>
+        <a className="social-link" href="mailto:abhishek.vats.av3@gmail.com" aria-label="Email"><FiMail className="w-6 h-6" /></a>
+      </div>
+      <div className="profile-contact border-t border-[var(--line)] pt-5 mt-5 text-left">
+        <p className="eyebrow mb-3">Currently shipping from</p>
+        <div className="flex items-center gap-2 text-sm text-[var(--muted)]"><GoLocation /><span>Delhi, India · open to impact</span></div>
+        <p className="text-xs text-[var(--muted)] mt-3 break-all">abhishek.vats.av3@gmail.com</p>
+      </div>
+      <div className="mt-8 rounded-2xl bg-[var(--accent-soft)] p-4 text-left">
+        <p className="eyebrow">Logbook note</p>
+        <p className="text-sm leading-6 text-[var(--muted)] mt-2">“The sea is vast. Good data makes the route visible.”</p>
+      </div>
+      {/* Keep the old navigation actions out of the profile: the content nav is the single source of truth. */}
+      <a className="hidden"
         href="https://bit.ly/abhishek_vats_cv"
         target="_blank"
         rel="noreferrer"
       >
         Resume
-        <PiEyeClosedBold className="w-6 h-6 " />
       </a>
-      <button
-        className={`w-full px-2 py-1 my-3 bg-gray-200 rounded-full font-semibold text-gray-700 hover:bg-green-100 transition ${theme === "dark" && "!bg-dark-200"}`}
-        onClick={() => window.location.reload()}
-      >
-        Tips
-      </button>
-
-      {/* social icons */}
-      <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
-        <a
-          href="https://github.com/abhishekvatsAV"
-          aria-label="Github"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <AiFillGithub className="w-8 h-8" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/abhishek-vats-av/"
-          aria-label="LinkedIN"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <AiFillLinkedin className="w-8 h-8" />
-        </a>
-      </div>
-
-      {/* address , email and phone details */}
-      <div
-        className={`py-4 my-5 bg-gray-200 ${
-          theme === "dark" && "!bg-dark-200"
-        } `}
-        style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
-      >
-        <div className="flex items-center justify-center space-x-2">
-          <GoLocation />
-          <span>Delhi, India</span>
-        </div>
-        <p className="my-2">abhishek.vats.av3@gmail.com</p>
-      </div>
-
-      <button
-        className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400 focus:outline-none"
-        onClick={() => window.open("mailto:abhishek.vats.av3@gmail.com")}
-      >
-        Email Me
-      </button>
-      <button
-        onClick={() => dispatch(toggleTheme())}
-        className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400 font-poppins text-sm dark:text-green"
-      >
-        Toggle Theme
-      </button>
     </div>
   );
 };

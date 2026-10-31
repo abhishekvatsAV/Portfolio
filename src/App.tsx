@@ -7,7 +7,6 @@ import { useState } from "react";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
-import Tips from "./pages/Tips";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
 
@@ -16,28 +15,21 @@ function App() {
   const theme = useSelector((state: RootState) => state.theme.value);
 
   return (
-    <div
-      className={`grid grid-cols-12 gap-4 sm:gap-6 px-3 sm:px-5 lg:px-48 py-4 sm:py-8 lg:py-14 md:px-32 ${theme === "dark" && " !text-white"
-        } min-h-screen h-full`}
-    >
-      <div
-        className={`col-span-12 p-3 sm:p-4 overflow-hidden text-center bg-white lg:col-span-3 rounded-xl sm:rounded-2xl shadow-custom-light ${theme === "dark" && "!bg-dark !shadow-custom-dark"
-          }`}
-      >
-        <Sidebar />
-      </div>
-      <div
-        className={`flex flex-col col-span-12 bg-white lg:col-span-9 rounded-xl sm:rounded-2xl shadow-custom-light overflow-hidden ${theme === "dark" && "!bg-dark !shadow-custom-dark"
-          }`}
-      >
+    <div className={`app-shell ${theme === "dark" ? "theme-dark" : ""}`}>
+      <div className="app-grid">
+        <aside className="profile-panel">
+          <Sidebar />
+        </aside>
+        <main className="content-panel">
         <Navbar section={section} setSection={setSection} />
         <AnimatePresence mode="wait">
           {section === "about" && <About />}
           {section === "resume" && <Resume />}
           {section === "projects" && <Projects />}
-          {section === "tips" && <Tips />}
         </AnimatePresence>
+        </main>
       </div>
+      <div className="grain" aria-hidden="true" />
     </div>
   );
 }

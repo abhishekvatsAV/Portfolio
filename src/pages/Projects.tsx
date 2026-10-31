@@ -2,10 +2,7 @@ import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
 const Projects = () => {
-  const theme = useSelector((state: RootState) => state.theme.value);
   const [showDetails, setShowDetails] = useState<number | null>(null);
 
   const container = {
@@ -29,17 +26,19 @@ const Projects = () => {
   };
 
   return (
-    <div className="px-4 sm:px-5 py-2 overflow-y-auto" style={{ height: "calc(100vh - 120px)", maxHeight: "65vh" }}>
+    <div className="page-content">
+      <p className="eyebrow">02 / selected builds</p>
+      <h1 className="section-title text-3xl mt-3 mb-2">Things I’ve shipped.</h1>
+      <p className="text-sm text-[var(--muted)] mb-7 max-w-xl">A mix of data-minded systems and full-stack experiments. Open a card to trace the stack.</p>
       <motion.div
-        className="grid grid-cols-12 gap-3 sm:gap-4 my-3"
+        className="project-grid"
         variants={container}
         initial="hidden"
         animate="visible"
       >
         {projects.map((project) => (
           <motion.div
-            className={`col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 ${theme === "dark" && "!bg-dark-200"
-              } `}
+            className="project-tile"
             variants={item}
             key={project.name}
           >

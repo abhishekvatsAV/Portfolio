@@ -30,7 +30,7 @@ const Tips: React.FC = () => {
       }
     }
     if (userId) fetchTips();
-  }, []);
+  }, [apiUrl, userId]);
 
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -56,9 +56,11 @@ const Tips: React.FC = () => {
   };
 
   // Refocus input after tip is submitted (newTip reset)
+  const isNewTipEmpty = newTip === '';
+
   React.useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
-  }, [newTip === '']);
+  }, [isNewTipEmpty]);
 
   const tipsWindowRef = React.useRef<HTMLDivElement>(null);
 

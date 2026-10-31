@@ -3,8 +3,6 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { fadeInUp, stagger } from "../animations";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
 
 const ProjectCard: React.FC<{
   project: IProject;
@@ -23,26 +21,34 @@ const ProjectCard: React.FC<{
   showDetails,
   setShowDetails,
 }) => {
-  const theme = useSelector((state: RootState) => state.theme.value);
-
   return (
     <div>
       <img
         src={image_path}
         alt={name}
-        className="cursor-pointer w-full"
+        className="cursor-pointer w-full transition-transform hover:scale-[1.02]"
         onClick={() => setShowDetails(id)}
         width="300"
         height="150"
       />
-      <p className="my-2 text-center"> {name} </p>
+      <div className="project-tile-content">
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {key_techs.slice(0, 4).map((tech) => <span className="tag" key={tech}>{tech}</span>)}
+        </div>
+        <div className="project-links flex gap-4">
+          <a href={github_url} target="_blank" rel="noreferrer">Source ↗</a>
+          {deployed_url !== "#" && <a href={deployed_url} target="_blank" rel="noreferrer">Live demo ↗</a>}
+        </div>
+      </div>
 
       {showDetails === id && (
         <div
           className={`fixed top-0 left-0 z-10 h-full w-full backdrop-blur-sm flex items-center justify-center min-h-screen`}
         >
           <motion.div
-            className={`relative m-auto grid h-auto p-5 text-black bg-gray-100 rounded-lg md:p-10 md:grid-cols-2 gap-x-12 max-w-2xl ${theme === "dark" && "!bg-dark-100 !text-white"} `}
+            className="relative m-auto grid h-auto p-5 text-[var(--ink)] bg-[var(--paper)] rounded-lg md:p-10 md:grid-cols-2 gap-x-12 max-w-2xl border border-[var(--line)]"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -60,9 +66,7 @@ const ProjectCard: React.FC<{
               >
                 <a
                   href={github_url}
-                  className={`flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 ${
-                    theme === "dark" && "!bg-lightBlack"
-                  } `}
+                  className="flex items-center px-4 py-2 space-x-3 text-lg bg-[var(--accent-soft)]"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -70,9 +74,7 @@ const ProjectCard: React.FC<{
                 </a>
                 <a
                   href={deployed_url}
-                  className={`flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 ${
-                    theme === "dark" && "!bg-lightBlack"
-                  }`}
+                  className="flex items-center px-4 py-2 space-x-3 text-lg bg-[var(--accent-soft)]"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -98,9 +100,7 @@ const ProjectCard: React.FC<{
                 {key_techs.map((tech) => (
                   <span
                     key={tech}
-                    className={`px-2 py-1 my-1 bg-gray-200 rounded-sm ${
-                      theme === "dark" && "!bg-lightBlack"
-                    }`}
+                    className="tag"
                   >
                     {tech}
                   </span>
@@ -110,9 +110,7 @@ const ProjectCard: React.FC<{
 
             <button
               onClick={() => setShowDetails(null)}
-              className={`absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none ${
-                theme === "dark" && "!bg-dark-200"
-              }`}
+              className="absolute p-1 bg-[var(--accent-soft)] rounded-full top-3 right-3 focus:outline-none"
             >
               <MdClose size={30} />{" "}
             </button>
