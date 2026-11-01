@@ -32,8 +32,8 @@
 
 | Project                | Description                            | Demo                                                    | Code                                                               |
 | ---------------------- | -------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------ |
-| Problem Tracker        | Track DSA problems, visualize progress | [Live](https://problemtracker.netlify.app/login)        | [Repo](https://github.com/abhishekvatsAV/problem-tracker-frontend) |
-| Chat App               | Real-time messaging with group chat    | [Live](https://chit-talks-app.netlify.app/)             | [Repo](https://github.com/abhishekvatsAV/Chit_Chat_App_Frontend)   |
+| Chat App               | Real-time messaging with group chat    | [Live](https://chit-chat-app-frontend-5rk1ylde2-abhishek-vats-projects.vercel.app/) | [Repo](https://github.com/abhishekvatsAV/Chit_Chat_App_Frontend) |
+| AlgoForge              | AI-powered coding challenge platform   | [Live](https://algo-forge-frontend.vercel.app/)        | [Repo](https://github.com/abhishekvatsAV/algoForge_Frontend)      |
 | Memory Game            | Card-flipping game to match pairs      | [Live](https://memory-game-6fss.onrender.com/)          | [Repo](https://github.com/abhishekvatsAV/Memory_Game)              |
 | Calculator             | Simple calculator with clean UI        | [Live](https://calculator-wljw.onrender.com/)           | [Repo](https://github.com/abhishekvatsAV/calculator)               |
 | Random Quote Generator | Generate and share random quotes       | [Live](https://random-quote-machine-shc3.onrender.com/) | [Repo](https://github.com/abhishekvatsAV/Random_Quote_Machine)     |
